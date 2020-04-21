@@ -82,9 +82,9 @@ function createStore(stateChanger: any): any {
       const index = listeners.indexOf(listener);
       listeners.splice(index, 1);
     };
-    dispatch({});
     return unsubscribe;
   };
+  dispatch({});
   return { getState, dispatch, subscribe };
 }
 
